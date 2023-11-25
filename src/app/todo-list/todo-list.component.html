@@ -1,0 +1,17 @@
+<div id="todo">
+    <h2>Todo List</h2>
+    <div class="d-flex mb-3">
+        <input type="text" [(ngModel)]="newTodo" placeholder="Add a new todo" class="form-control mr-2">
+        <button (click)="addTodo()" class="btn btn-success">Add</button>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item mb-3" *ngFor="let todo of todos; let i = index">
+            <div class="row">
+                <div class="col">{{ todo }}</div>
+                <div class="col-auto">
+                    <button (click)="removeTodo(i)" class="btn btn-danger">Remove</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

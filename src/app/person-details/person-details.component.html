@@ -1,0 +1,21 @@
+<form>
+    <div class="mb-3">
+        <label for="fname" class="form-label">First Name:</label>
+        <input type="text" class="form-control" id="fname" name="fNameData" [(ngModel)]="fName">
+    </div>
+    <div class="mb-3">
+        <label for="lname" class="form-label">Last Name:</label>
+        <input type="text" class="form-control" id="lname" name="lNameData" [(ngModel)]="lName">
+    </div>
+    <div class="mb-3">
+        <label for="emails" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="emails" name="emailData" [(ngModel)]="email">
+    </div>
+    <button type="button" (click)="submitData()" class="btn btn-primary">Submit</button>
+</form>
+
+<div *ngIf="fNamePrint!=''">
+    <p>Book Id: {{fNamePrint}}</p>
+    <p>Book Author: {{lNamePrint}}</p>
+    <p>Author name: {{emailPrint}}</p>
+</div>
